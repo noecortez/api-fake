@@ -18,15 +18,13 @@
         "max": "2023-05-31T23:59:59Z"
       }
     },
-    "sala": {
-      "nombre": {
-        "string": {}
-      },
-      "capacidad": {
-        "int": {
-          "min": 4,
-          "max": 30
-        }
+    "nombre_sala": {
+      "string": {}
+    },
+    "capacidad_sala": {
+      "int": {
+        "min": 4,
+        "max": 30
       }
     }
   }
