@@ -1,6 +1,6 @@
 models:
   Institution:
-    _count: 0     # ← Esto desactiva los 10 autogenerados
+    _count: 3     # ← Esto desactiva los 10 autogenerados
     fields:
       id: int
       name: string
