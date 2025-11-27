@@ -1,19 +1,79 @@
 models:
-  Post:
-    hasMany: [Comment]
+  Institution:
+    hasMany: [Category]
     fake:
-      _count: 10
-      cover: { imageURL: [1920, 1080] }
-      title: { loremWords: [5, 20] }
-      body: { loremParagraphs: [10, 100] }
-      category: { oneOfString: [one, two, three] }
-      isDraft: { bool: 20 }
-      views: { int: [0, 1000] }
-      createdAt: { dateTime: [2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z] }
-  Comment:
-    belongsTo: [Post]
+      _count: 6
+      id: { int: [1, 9999] }
+      name: { oneOfString: [
+        "Institución 1",
+        "Institución 2",
+        "Institución 3",
+        "Institución 4",
+        "Institución 5",
+        "Institución 6",
+      ] }
+
+  Category:
+    belongsTo: [Institution]
     fake:
-      _count: 25
-      email: email
-      body: { loremParagraphs: [10, 100] }
-      createdAt: { dateTime: [2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z] }
+      _count: 30
+      id: { int: [1, 9999] }
+      name: { oneOfString: [
+        # MARN
+        "MARN",
+        "DEFENSA",
+        "MATERIALES PELIGROSOS",
+        "OTROS",
+        
+        # MOP
+        "OBRAS PÚBLICAS",
+        "PERMISOS DE CONSTRUCCIÓN",
+        "SEÑALIZACIÓN",
+        
+        # PGR
+        "ASISTENCIA LEGAL",
+        "DEFENSORÍA",
+        
+        # PNC
+        "DENUNCIAS",
+        "ANTECEDENTES PENALES",
+        
+        # MINED
+        "CERTIFICACIONES",
+        "TÍTULOS",
+        
+        # MH
+        "DECLARACIONES",
+        "PAGOS",
+        "FACTURACIÓN ELECTRÓNICA"
+      ] }
+
+      description: { oneOfString: [
+        # MARN
+        "Trámites relacionados con el medio ambiente",
+        "Gestión de sustancias y residuos peligrosos",
+        "Permisos y licencias de seguridad y defensa",
+        "Trámites diversos no categorizados",
+        
+        # MOP
+        "Trámites relacionados con obras públicas",
+        "Permisos para proyectos de construcción",
+        "Gestión de señalización vial",
+        
+        # PGR
+        "Asistencia jurídica a la población",
+        "Servicios de defensoría pública",
+        
+        # PNC
+        "Recepción de denuncias",
+        "Solicitud de antecedentes penales",
+        
+        # MINED
+        "Solicitudes de certificaciones de estudios",
+        "Gestión de títulos académicos",
+        
+        # MH
+        "Presentación de declaraciones fiscales",
+        "Pago de obligaciones tributarias",
+        "Gestión de facturación electrónica"
+      ] }
