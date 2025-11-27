@@ -4,13 +4,8 @@ models:
     fields:
       id: int
       name: string
-    data:
-      - id: 1
-        name: "MARN"
-      - id: 2
-        name: "MOP"
-      - id: 3
-        name: "MINED"
+    data: [
+      {id: 1, name: "MARN"}
 
   Category:
     _count: 0     # ← También recomendable
