@@ -1,5 +1,6 @@
 models:
   Institution:
+    _count: 0     # ← Esto desactiva los 10 autogenerados
     fields:
       id: int
       name: string
@@ -11,69 +12,60 @@ models:
       - id: 3
         name: "MINED"
 
-
   Category:
+    _count: 0     # ← También recomendable
+    fields:
+      id: int
+      name: string
+      description: string
+      institutionId: int
     data:
-      # ---- MARN ----
       - id: 1
         name: "MARN"
         description: "Trámites relacionados con el medio ambiente"
         institutionId: 1
-
       - id: 2
         name: "MATERIALES PELIGROSOS"
         description: "Gestión de sustancias y residuos peligrosos"
         institutionId: 1
-
       - id: 3
         name: "DEFENSA"
         description: "Permisos y licencias de seguridad y defensa"
         institutionId: 1
-
       - id: 4
         name: "OTROS"
         description: "Trámites diversos no categorizados"
         institutionId: 1
 
-
-      # ---- MOP ----
       - id: 5
         name: "OBRAS PÚBLICAS"
         description: "Trámites relacionados con obras públicas"
         institutionId: 2
-
       - id: 6
         name: "PERMISOS DE CONSTRUCCIÓN"
         description: "Permisos para proyectos de construcción"
         institutionId: 2
-
       - id: 7
         name: "SEÑALIZACIÓN"
         description: "Gestión de señalización vial"
         institutionId: 2
-
       - id: 8
         name: "OTROS SERVICIOS MOP"
         description: "Servicios adicionales brindados por el MOP"
         institutionId: 2
 
-
-      # ---- MINED ----
       - id: 9
         name: "CERTIFICACIONES"
         description: "Solicitudes de certificaciones de estudios"
         institutionId: 3
-
       - id: 10
         name: "TÍTULOS"
         description: "Gestión de títulos académicos"
         institutionId: 3
-
       - id: 11
         name: "FORMACIÓN DOCENTE"
         description: "Trámites relacionados con docentes y capacitaciones"
         institutionId: 3
-
       - id: 12
         name: "EVALUACIONES"
         description: "Servicios asociados a evaluaciones académicas"
