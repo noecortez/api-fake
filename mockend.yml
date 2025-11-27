@@ -1,10 +1,16 @@
 models:
   Institution:
-    _count: 3     # ← Esto desactiva los 10 autogenerados
+    _count: 0     # ← Esto desactiva los 10 autogenerados
     fields:
       id: int
       name: string
-    data: [{id: 1, name: "MARN"}]
+    data:
+      - id: 1
+        name: "MARN"
+      - id: 2
+        name: "MOP"
+      - id: 3
+        name: "MINED"
 
   Category:
     _count: 0     # ← También recomendable
