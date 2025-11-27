@@ -5,7 +5,7 @@ models:
       id: int
       name: string
     data: [
-      {id: 1, name: "MARN"}
+      {id: 1, name: "MARN"}]
 
   Category:
     _count: 0     # ← También recomendable
