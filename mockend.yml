@@ -1,73 +1,79 @@
 models:
   Institution:
-    hasMany: [Category]
-    fake:
-      _count: 6
-      id: { int: [1, 9999] }
-      name: { stringOf: ["Institución 1", "Institución 2", "Institución 3", "Institución 4", "Institución 5", "Institución 6"]}
+    data:
+      - id: 1
+        name: "MARN"
+
+      - id: 2
+        name: "MOP"
+
+      - id: 3
+        name: "MINED"
+
 
   Category:
-    belongsTo: [Institution]
-    fake:
-      _count: 30
-      id: { int: [1, 9999] }
+    data:
+      # ---- MARN ----
+      - id: 1
+        name: "MARN"
+        description: "Trámites relacionados con el medio ambiente"
+        institutionId: 1
 
-      name:
-        stringOf:
-          # MARN
-          - "MARN"
-          - "DEFENSA"
-          - "MATERIALES PELIGROSOS"
-          - "OTROS"
+      - id: 2
+        name: "MATERIALES PELIGROSOS"
+        description: "Gestión de sustancias y residuos peligrosos"
+        institutionId: 1
 
-          # MOP
-          - "OBRAS PÚBLICAS"
-          - "PERMISOS DE CONSTRUCCIÓN"
-          - "SEÑALIZACIÓN"
+      - id: 3
+        name: "DEFENSA"
+        description: "Permisos y licencias de seguridad y defensa"
+        institutionId: 1
 
-          # PGR
-          - "ASISTENCIA LEGAL"
-          - "DEFENSORÍA"
+      - id: 4
+        name: "OTROS"
+        description: "Trámites diversos no categorizados"
+        institutionId: 1
 
-          # PNC
-          - "DENUNCIAS"
-          - "ANTECEDENTES PENALES"
 
-          # MINED
-          - "CERTIFICACIONES"
-          - "TÍTULOS"
+      # ---- MOP ----
+      - id: 5
+        name: "OBRAS PÚBLICAS"
+        description: "Trámites relacionados con obras públicas"
+        institutionId: 2
 
-          # MH
-          - "DECLARACIONES"
-          - "PAGOS"
-          - "FACTURACIÓN ELECTRÓNICA"
+      - id: 6
+        name: "PERMISOS DE CONSTRUCCIÓN"
+        description: "Permisos para proyectos de construcción"
+        institutionId: 2
 
-      description:
-        stringOf:
-          # MARN
-          - "Trámites relacionados con el medio ambiente"
-          - "Gestión de sustancias y residuos peligrosos"
-          - "Permisos y licencias de seguridad y defensa"
-          - "Trámites diversos no categorizados"
+      - id: 7
+        name: "SEÑALIZACIÓN"
+        description: "Gestión de señalización vial"
+        institutionId: 2
 
-          # MOP
-          - "Trámites relacionados con obras públicas"
-          - "Permisos para proyectos de construcción"
-          - "Gestión de señalización vial"
+      - id: 8
+        name: "OTROS SERVICIOS MOP"
+        description: "Servicios adicionales brindados por el MOP"
+        institutionId: 2
 
-          # PGR
-          - "Asistencia jurídica a la población"
-          - "Servicios de defensoría pública"
 
-          # PNC
-          - "Recepción de denuncias"
-          - "Solicitud de antecedentes penales"
+      # ---- MINED ----
+      - id: 9
+        name: "CERTIFICACIONES"
+        description: "Solicitudes de certificaciones de estudios"
+        institutionId: 3
 
-          # MINED
-          - "Solicitudes de certificaciones de estudios"
-          - "Gestión de títulos académicos"
+      - id: 10
+        name: "TÍTULOS"
+        description: "Gestión de títulos académicos"
+        institutionId: 3
 
-          # MH
-          - "Presentación de declaraciones fiscales"
-          - "Pago de obligaciones tributarias"
-          - "Gestión de facturación electrónica"
+      - id: 11
+        name: "FORMACIÓN DOCENTE"
+        description: "Trámites relacionados con docentes y capacitaciones"
+        institutionId: 3
+
+      - id: 12
+        name: "EVALUACIONES"
+        description: "Servicios asociados a evaluaciones académicas"
+        institutionId: 3
