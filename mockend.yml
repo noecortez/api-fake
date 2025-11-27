@@ -4,14 +4,7 @@ models:
     fake:
       _count: 6
       id: { int: [1, 9999] }
-      name:
-        stringOf:
-          - "Institución 1"
-          - "Institución 2"
-          - "Institución 3"
-          - "Institución 4"
-          - "Institución 5"
-          - "Institución 6"
+      name: { stringOf: ["Institución 1", "Institución 2", "Institución 3", "Institución 4", "Institución 5", "Institución 6"]}
 
   Category:
     belongsTo: [Institution]
