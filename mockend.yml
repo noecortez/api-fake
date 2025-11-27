@@ -10,7 +10,21 @@ models:
       - id: 2
         name: "MOP"
       - id: 3
-        name: "MINED"
+        name: "Ministerio de Educación e Innovavión"
+      - id: 4
+        name: "Ministerio de Salud"
+      - id: 5
+        name: "Ministerio de "
+      - id: 6
+        name: "Ministerio de Educación e Innovavión"
+      - id: 7
+        name: "MARN"
+      - id: 8
+        name: "MOP"
+      - id: 9
+        name: "Ministerio de Educación e Innovavión"
+      - id: 10
+        name: "Ministerio de Educación e Innovavión"
 
   Tramite:
     _count: 0
@@ -137,3 +151,129 @@ models:
         inReview: 3
         approved: 17
         rejected: 1
+
+  User:
+    _count: 0
+    fields:
+      id: int
+      firstName: string
+      lastName: string
+      email: string
+      phone: string
+      dui: string
+      role: string
+      memberSince: string
+      status: string
+      avatar: string
+
+    data:
+      - id: 1
+        firstName: "Juan"
+        lastName: "Pérez"
+        email: "juan.perez@email.com"
+        phone: "+503 7000 1001"
+        dui: "01234567-1"
+        role: "Analista Técnico"
+        memberSince: "2022-03-10"
+        status: "Activo"
+        avatar: ""
+
+      - id: 2
+        firstName: "María"
+        lastName: "Gómez"
+        email: "maria.gomez@email.com"
+        phone: "+503 7000 1002"
+        dui: "12345678-2"
+        role: "Jefa de Área"
+        memberSince: "2021-11-04"
+        status: "Activo"
+        avatar: ""
+
+      - id: 3
+        firstName: "Carlos"
+        lastName: "Ramírez"
+        email: "carlos.ramirez@email.com"
+        phone: "+503 7000 1003"
+        dui: "23456789-3"
+        role: "Técnico Especialista"
+        memberSince: "2023-01-22"
+        status: "Inactivo"
+        avatar: ""
+
+      - id: 4
+        firstName: "Laura"
+        lastName: "Hernández"
+        email: "laura.hernandez@email.com"
+        phone: "+503 7000 1004"
+        dui: "34567890-4"
+        role: "Coordinadora"
+        memberSince: "2020-06-18"
+        status: "Activo"
+        avatar: ""
+
+      - id: 5
+        firstName: "Roberto"
+        lastName: "López"
+        email: "roberto.lopez@email.com"
+        phone: "+503 7000 1005"
+        dui: "45678901-5"
+        role: "Asistente Administrativo"
+        memberSince: "2022-09-14"
+        status: "Activo"
+        avatar: ""
+
+      - id: 6
+        firstName: "Patricia"
+        lastName: "Santos"
+        email: "patricia.santos@email.com"
+        phone: "+503 7000 1006"
+        dui: "56789012-6"
+        role: "Supervisora"
+        memberSince: "2021-02-01"
+        status: "Inactivo"
+        avatar: ""
+
+      - id: 7
+        firstName: "Ricardo"
+        lastName: "Morales"
+        email: "ricardo.morales@email.com"
+        phone: "+503 7000 1007"
+        dui: "67890123-7"
+        role: "Desarrollador Frontend"
+        memberSince: "2023-04-11"
+        status: "Activo"
+        avatar: ""
+
+      - id: 8
+        firstName: "Elena"
+        lastName: "Castillo"
+        email: "elena.castillo@email.com"
+        phone: "+503 7000 1008"
+        dui: "78901234-8"
+        role: "Analista de Procesos"
+        memberSince: "2020-12-20"
+        status: "Activo"
+        avatar: ""
+
+      - id: 9
+        firstName: "Jorge"
+        lastName: "Vásquez"
+        email: "jorge.vasquez@email.com"
+        phone: "+503 7000 1009"
+        dui: "89012345-9"
+        role: "Soporte Técnico"
+        memberSince: "2023-05-02"
+        status: "Activo"
+        avatar: ""
+
+      - id: 10
+        firstName: "Sofía"
+        lastName: "Montoya"
+        email: "sofia.montoya@email.com"
+        phone: "+503 7000 1010"
+        dui: "90123456-0"
+        role: "Especialista Jurídica"
+        memberSince: "2021-07-30"
+        status: "Inactivo"
+        avatar: ""
+
