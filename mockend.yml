@@ -1,12 +1,13 @@
 models:
   Institution:
+    fields:
+      id: int
+      name: string
     data:
       - id: 1
         name: "MARN"
-
       - id: 2
         name: "MOP"
-
       - id: 3
         name: "MINED"
 
