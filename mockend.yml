@@ -1,6 +1,6 @@
 models:
   Institution:
-    _count: 0     # ← Esto desactiva los 10 autogenerados
+    _count: 0
     fields:
       id: int
       name: string
@@ -12,60 +12,128 @@ models:
       - id: 3
         name: "MINED"
 
-  Category:
-    _count: 0     # ← También recomendable
+  Tramite:
+    _count: 0
     fields:
       id: int
       name: string
       description: string
       institutionId: int
+      inProcess: int
+      inReview: int
+      approved: int
+      rejected: int
+
     data:
+      # ---------- MARN ----------
       - id: 1
         name: "MARN"
-        description: "Trámites relacionados con el medio ambiente"
+        description: "Ministerio de medio ambiente y recursos naturales."
         institutionId: 1
-      - id: 2
-        name: "MATERIALES PELIGROSOS"
-        description: "Gestión de sustancias y residuos peligrosos"
-        institutionId: 1
-      - id: 3
-        name: "DEFENSA"
-        description: "Permisos y licencias de seguridad y defensa"
-        institutionId: 1
-      - id: 4
-        name: "OTROS"
-        description: "Trámites diversos no categorizados"
-        institutionId: 1
+        inProcess: 123
+        inReview: 45
+        approved: 80
+        rejected: 12
 
+      - id: 2
+        name: "Materiales Peligrosos"
+        description: "Gestión de sustancias y materiales peligrosos."
+        institutionId: 1
+        inProcess: 40
+        inReview: 10
+        approved: 22
+        rejected: 3
+
+      - id: 3
+        name: "Ministerio de La Defensa"
+        description: "Permisos y licencias de seguridad y defensa."
+        institutionId: 1
+        inProcess: 12
+        inReview: 5
+        approved: 9
+        rejected: 1
+
+      - id: 4
+        name: "Otros"
+        description: "Trámites diversos no categorizados."
+        institutionId: 1
+        inProcess: 18
+        inReview: 4
+        approved: 11
+        rejected: 2
+
+
+      # ---------- MOP ----------
       - id: 5
-        name: "OBRAS PÚBLICAS"
-        description: "Trámites relacionados con obras públicas"
+        name: "Obras Públicas"
+        description: "Trámites relacionados con obras públicas."
         institutionId: 2
+        inProcess: 30
+        inReview: 8
+        approved: 19
+        rejected: 2
+
       - id: 6
-        name: "PERMISOS DE CONSTRUCCIÓN"
-        description: "Permisos para proyectos de construcción"
+        name: "Permisos de Construcción"
+        description: "Permisos para proyectos de construcción."
         institutionId: 2
+        inProcess: 25
+        inReview: 12
+        approved: 15
+        rejected: 4
+
       - id: 7
-        name: "SEÑALIZACIÓN"
-        description: "Gestión de señalización vial"
+        name: "Señalización"
+        description: "Gestión de señalización vial."
         institutionId: 2
+        inProcess: 10
+        inReview: 2
+        approved: 8
+        rejected: 0
+
       - id: 8
-        name: "OTROS SERVICIOS MOP"
-        description: "Servicios adicionales brindados por el MOP"
+        name: "Otros Servicios MOP"
+        description: "Servicios adicionales brindados por el MOP."
         institutionId: 2
+        inProcess: 5
+        inReview: 1
+        approved: 3
+        rejected: 1
+
+
+      # ---------- MINED ----------
       - id: 9
-        name: "CERTIFICACIONES"
-        description: "Solicitudes de certificaciones de estudios"
+        name: "Certificaciones"
+        description: "Solicitudes de certificaciones de estudios."
         institutionId: 3
+        inProcess: 60
+        inReview: 22
+        approved: 50
+        rejected: 8
+
       - id: 10
-        name: "TÍTULOS"
-        description: "Gestión de títulos académicos"
+        name: "Títulos"
+        description: "Gestión de títulos académicos."
         institutionId: 3
+        inProcess: 40
+        inReview: 15
+        approved: 34
+        rejected: 6
+
       - id: 11
-        name: "FORMACIÓN DOCENTE"
-        description: "Trámites relacionados con docentes y capacitaciones"
+        name: "Formación Docente"
+        description: "Trámites relacionados con docentes y capacitaciones."
         institutionId: 3
+        inProcess: 12
+        inReview: 5
+        approved: 8
+        rejected: 0
+
       - id: 12
-        name: "EVALUACIONES"
-        description: "Servicios asociados a evaluaciones académicas"
+        name: "Evaluaciones"
+        description: "Servicios asociados a evaluaciones académicas."
         institutionId: 3
+        inProcess: 20
+        inReview: 3
+        approved: 17
+        rejected: 1
