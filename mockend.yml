@@ -4,8 +4,7 @@ models:
     fields:
       id: int
       name: string
-    data: [
-      {id: 1, name: "MARN"}]
+    data: [{id: 1, name: "MARN"}]
 
   Category:
     _count: 0     # ← También recomendable
