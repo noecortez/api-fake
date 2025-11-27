@@ -2,7 +2,7 @@ models:
   Post: # models must be singular and CamelCased
     belongsTo: [User] # Relations will be used in REST and GraphQL
     hasMany: [Comment]
-    count: 50 # generate 50 items
+    count: 5 # generate 50 items
     fake:
       title: loremWords # random generator have default values
       body: { loremWords: [3, 10] } # but you can pass arguments for some
